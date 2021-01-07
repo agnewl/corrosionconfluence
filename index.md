@@ -1,0 +1,44 @@
+style
+#main.aui-page-panel{
+background-color #F4F5F7; 
+color #54565E;
+padding 60px;
+font-family Courier
+}
+a.aui-button.create-from-template-button.conf-macro.output-inline,table.aui.metadata-summary-macro.null.tablesorter.tablesorter-default{
+background-color #F8F9F9; 
+color #474950;
+}
+#navigation a,span.aui-icon.aui-icon-small,#content-metadata-page-restrictions,#main-content a,#breadcrumbs a,span.expand-control-text{
+color #FF4500;
+}
+.wiki-content h3,.wiki-content h2,.wiki-content h1,.wiki-content h4, #title-text a,span.aui-icon.aui-icon-small.aui-iconfont-devtools-tag-small{
+color #54565E;
+}
+
+#comments-section{displaynone;}
+#footer{displaynone;}
+#likes-section.no-print{displaynone;}
+li.page-metadata-modification-info{displaynone;}
+div.ia-splitter-left{displaynone;}
+div.ia-splitter{margin-right 55px; margin-bottom 55px}
+style
+
+
+!-- BELOW DEFINES NEW HEADER --
+div id=myHeader style=padding 20px;text-align center;background #F4F5F7;font-size 15px;
+  h1 style=color #474950; font-family CourierCorrosion Team Testingh1
+div
+script type=textjavascript!--
+window.onload = document.getElementById(myHeader).style.display = none
+--script
+
+script type=textjavascript!--
+function ReplaceContentInContainer(id,content) {
+var container = document.getElementById(id);
+container.outerHTML = document.getElementById(content).outerHTML;
+container.innerHTML = document.getElementById(content).innerHTML;
+}
+window.onload = ReplaceContentInContainer('header','myHeader')
+window.onload = document.getElementById(myHeader).style.display = inline
+--script
